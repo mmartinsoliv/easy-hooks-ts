@@ -1,1 +1,1 @@
-export { useCount } from './useIsMobile'
+export { useCount } from "./useIsMobile";
