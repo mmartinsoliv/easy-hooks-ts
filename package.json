@@ -1,6 +1,6 @@
 {
   "name": "izi-hooks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A custom hook library",
   "source": "src/index.ts",
   "main": "dist/index.cjs.js",
@@ -11,12 +11,6 @@
     "dist",
     "README.md"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/izi-hooks.cjs.js",
-      "require": "./dist/izi-hooks.es.js"
-    }
-  },
   "scripts": {
     "build": "tsc && vite build",
     "test": "vitest",
