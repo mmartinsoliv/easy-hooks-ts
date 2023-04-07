@@ -1,8 +1,8 @@
 {
   "name": "izi-hooks",
-  "private": true,
-  "version": "0.0.0",
-  "source": "srx/index.ts",
+  "version": "0.0.1",
+  "description": "A custom hook library",
+  "source": "src/index.ts",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -21,17 +21,21 @@
     "build": "tsc && vite build",
     "test": "vitest",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "release": "semantic-release"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^10.0.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.28",
@@ -52,6 +56,7 @@
     "eslint-plugin-testing-library": "3.10.1",
     "jsdom": "^21.1.1",
     "prettier": "2.2.1",
+    "semantic-release": "^21.0.1",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
     "vite-plugin-eslint": "^1.8.1",
@@ -60,5 +65,20 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/mmartinsoliv/izi-hooks.git"
+  },
+  "keywords": [
+    "custom hook",
+    "library",
+    "react"
+  ],
+  "author": "Matheus Martins <mmartinsolliv@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmartinsoliv/izi-hooks/issues"
+  },
+  "homepage": "https://github.com/mmartinsoliv/izi-hooks#readme",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
   }
 }
