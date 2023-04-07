@@ -35,11 +35,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
-      - run: |
-          GH_TOKEN=${GH_TOKEN}
-          NPM_TOKEN=${NPM_TOKEN}
-          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
-          npx semantic-release
+      - run: npx semantic-release
+
   cleanup:
     needs: publish
     runs-on: ubuntu-latest
