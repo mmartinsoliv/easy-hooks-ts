@@ -35,7 +35,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
-      - run: npx semantic-release
+      - run: npm run release
 
   cleanup:
     needs: publish
