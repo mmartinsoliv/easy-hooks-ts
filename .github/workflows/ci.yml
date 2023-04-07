@@ -8,6 +8,10 @@ on:
     branches:
       - master
 
+env:
+  GH_TOKEN: ${{secrets.GH_TOKEN}}
+  NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -16,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run lint
       - run: npm run test
@@ -28,6 +32,19 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
+      - run: |
+          GH_TOKEN=${GH_TOKEN}
+          NPM_TOKEN=${NPM_TOKEN}
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
+          npx semantic-release
+  cleanup:
+    needs: publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/delete-package-versions@v3
+        with:
+          package-name: "izi-hooks"
+          min-versions-to-keep: 5
