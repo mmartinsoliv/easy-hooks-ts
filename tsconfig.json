@@ -15,7 +15,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "baseUrl": ".",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "izi-hooks": ["src/index.ts"],
+    },
+    "typeRoots": ["node_modules/@types", "src/index.d.ts"]
   },
   "include": ["src"],
   "exclude": ["dist", "node_modules", "src/setupTests.ts"],
