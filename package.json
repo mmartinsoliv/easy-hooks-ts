@@ -1,6 +1,6 @@
 {
   "name": "izi-hooks",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A custom hook library",
   "type": "module",
   "types": "./dist/index.d.ts",
