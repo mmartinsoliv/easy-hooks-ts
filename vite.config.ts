@@ -32,9 +32,6 @@ export default defineConfig({
     },
     optimizeDeps: {
       exclude: Object.keys(packageJson.peerDependencies)
-    },
-    esbuild: {
-      minify: true
     }
   }
 })
