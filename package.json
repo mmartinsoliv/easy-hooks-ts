@@ -1,10 +1,14 @@
 {
-  "name": "izi-hooks",
+  "name": "easy-hooks-ts",
   "version": "0.1.1",
   "description": "A custom hook library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
   "files": [
     "dist",
     "README.md"
