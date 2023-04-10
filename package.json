@@ -1,5 +1,5 @@
 {
-  "name": "easy-hooks-ts",
+  "name": "izi-hooks",
   "version": "0.1.1",
   "description": "A custom hook library",
   "main": "dist/index.js",
