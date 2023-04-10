@@ -1,6 +1,6 @@
 {
   "name": "easy-hooks-ts",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "description": "A custom hook library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "run-p build:*",
-    "build:tsup": "tsup --dts --minify",
+    "build:tsup": "tsup --dts",
     "changeset": "changeset",
     "clean": "rimraf dist",
     "lint": "run-p lint:*",
