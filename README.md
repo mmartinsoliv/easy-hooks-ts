@@ -2,7 +2,7 @@
 
 ### React hook library, ready to use, written in Typescript.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) [![NPM version](https://img.shields.io/npm/v/easy-hooks-ts)](https://www.npmjs.com/package/easy-hooks-ts) [![Code of Conduct](https://img.shields.io/badge/Code%20of-conduct-d03eaf?style=flat)](https://github.com/joshwcomeau/use-sound/blob/master/CONDUCT.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) [![NPM version](https://img.shields.io/npm/v/easy-hooks-ts)](https://www.npmjs.com/package/easy-hooks-ts)
 
 This library only works with React DOM
 
