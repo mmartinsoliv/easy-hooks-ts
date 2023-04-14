@@ -1,6 +1,6 @@
 {
   "name": "easy-hooks-ts",
-  "version": "0.1.3",
+  "version": "0.0.0-development",
   "description": "A custom hook library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -27,9 +27,8 @@
     "lint:prettier:fix": "npm run lint:prettier --write",
     "lint:tsc": "tsc --project tsconfig.json --noEmit",
     "test": "vitest --passWithNoTests",
-    "release": "changeset publish",
-    "version": "changeset version"
-  },
+    "release": "semantic-release --branches main"
+    },
   "peerDependencies": {
     "react": "^16.8.0  || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0  || ^17.0.0 || ^18.0.0"
@@ -70,11 +69,12 @@
     "vite-plugin-dts": "^2.2.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.0.8",
-    "vitest": "^0.29.8"
+    "vitest": "^0.29.8",
+    "semantic-release": "^21.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mmartinsoliv/izi-hooks.git"
+    "url": "https://github.com/mmartinsoliv/easy-hooks-ts.git"
   },
   "keywords": [
     "custom hook",
@@ -84,9 +84,9 @@
   "author": "Matheus Martins <mmartinsolliv@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmartinsoliv/izi-hooks/issues"
+    "url": "https://github.com/mmartinsoliv/easy-hooks-ts/issues"
   },
-  "homepage": "https://github.com/mmartinsoliv/izi-hooks#readme",
+  "homepage": "https://github.com/mmartinsoliv/easy-hooks-ts#readme",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
