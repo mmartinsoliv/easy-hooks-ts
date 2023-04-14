@@ -27,7 +27,7 @@
     "lint:prettier:fix": "npm run lint:prettier --write",
     "lint:tsc": "tsc --project tsconfig.json --noEmit",
     "test": "vitest --passWithNoTests",
-    "release": "semantic-release --branches main"
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": "^16.8.0  || ^17.0.0 || ^18.0.0",
