@@ -16,6 +16,7 @@
   "scripts": {
     "build": "run-p build:*",
     "build:tsup": "tsup --dts",
+    "commit": "git-cz",
     "changeset": "changeset",
     "clean": "rimraf dist",
     "generate": "npx plop --plopfile scripts/cli.js",
@@ -26,7 +27,8 @@
     "lint:prettier:fix": "npm run lint:prettier --write",
     "lint:tsc": "tsc --project tsconfig.json --noEmit",
     "test": "vitest --passWithNoTests",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "version": "changeset version"
   },
   "peerDependencies": {
     "react": "^16.8.0  || ^17.0.0 || ^18.0.0",
@@ -35,8 +37,6 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.1",
-    "@commitlint/cli": "^17.5.1",
-    "@commitlint/config-conventional": "^17.4.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.28",
@@ -44,6 +44,7 @@
     "@typescript-eslint/eslint-plugin": "4.15.2",
     "@typescript-eslint/parser": "4.15.2",
     "@vitejs/plugin-react": "^3.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "8.1.0",
@@ -63,7 +64,6 @@
     "prettier": "2.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "semantic-release": "^21.0.1",
     "tsup": "^6.7.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
@@ -86,5 +86,10 @@
   "bugs": {
     "url": "https://github.com/mmartinsoliv/izi-hooks/issues"
   },
-  "homepage": "https://github.com/mmartinsoliv/izi-hooks#readme"
+  "homepage": "https://github.com/mmartinsoliv/izi-hooks#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
