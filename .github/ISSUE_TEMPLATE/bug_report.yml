@@ -1,42 +1,80 @@
-name: 'Bug report'
-description: Create a bug report for the easy-hooks-ts
-labels: ['template: bug']
-body: 
-  - type: markdown
-    attributes: 
+name: "🐛 Bug Report"
+description: Create a new ticket for a bug.
+title: "🐛 [BUG] - <title>"
+labels: [
+  "bug"
+]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Please enter an explicit description of your issue
+      placeholder: Short and explicit description of your incident...
+    validations:
+      required: true
+  - type: input
+    id: reprod-url
+    attributes:
+      label: "Reproduction URL"
+      description: Please enter your GitHub URL to provide a reproduction of the issue
+      placeholder: ex. https://github.com/USERNAME/REPO-NAME
+    validations:
+      required: true
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction steps"
+      description: Please enter an explicit description of your issue
       value: |
-         ## Bug report
-        
-        ### Current Behavior
-        
-        <!-- If applicable, add screenshots/videos to help explain the problem. -->
-        
-        ### Expected behavior
-        
-        <!-- A clear and concise description of what you expected to happen. -->
-        
-        ### Reproducible example
-        
-        [StackBlitz Template](https://stackblitz.com/edit/react-ts-z7abvy?file=App.tsx)
-        
-        ### Suggested solution
-        
-        <!-- How could we solve this bug? What changes would need to made? -->
-        
-        ### Additional context
-        
-        <!-- Add any other context about the problem here.  -->
-        
-        ### Your environment
-        
-        <!-- Very important for us to help you debug. Please fill this out! -->
-        
-        | Software         | Name(s) | Version |
-        | ---------------- | ------- | ------- |
-        | Custom Hook      |         |         |
-        | React            | n/a     |         |
-        | Browser          |         |         |
-        | Assistive tech   |         |         |
-        | Node             | n/a     |         |
-        | npm/yarn         |         |         |
-        | Operating System |         |         |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      value: |
+        ![DESCRIPTION](LINK.png)
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: bash
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "Browsers"
+      description: What browsers are you seeing the problem on ?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+    validations:
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: "OS"
+      description: What is the impacted environment ?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: false
