@@ -1,3 +1,1 @@
-export { useCount } from './useIsMobile'
-
-export { useTest } from './useTest/useTest'
+export { useToggle } from './useToggle/useToggle'
