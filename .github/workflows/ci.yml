@@ -35,11 +35,12 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
+        name: release
       - run: |
             export GH_TOKEN="${{ secrets.GITHUB_TOKEN }}"
             export NPM_TOKEN="${{ secrets.NPM_TOKEN }}"
             echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
-            npm run semantic-release
+            npx semantic-release
 
   cleanup:
     needs: publish
