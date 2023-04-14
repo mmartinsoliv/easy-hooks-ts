@@ -8,10 +8,6 @@ on:
     branches:
       - main
 
-env:
-  GH_TOKEN: ${{secrets.GH_TOKEN}}
-  NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -35,7 +31,15 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
-      - run: npm run release
+      
+      - name: Create Release Pull Request or Publish to npm
+        uses: changesets/action@v1
+        with:
+          publish: npm run release
+          version: npm run version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   cleanup:
     needs: publish
@@ -43,5 +47,5 @@ jobs:
     steps:
       - uses: actions/delete-package-versions@v3
         with:
-          package-name: "izi-hooks"
+          package-name: "easy-hooks-ts"
           min-versions-to-keep: 5
