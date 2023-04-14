@@ -43,7 +43,6 @@ jobs:
           EOF
       
       - name: Publish to npm
-        uses: actions/checkout@v3
       - run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
