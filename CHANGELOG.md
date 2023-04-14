@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.3.0...v0.4.0) (2023-04-14)
+
+
+### Features
+
+* **toggle:** create useToggle hook ([55376c2](https://github.com/mmartinsoliv/easy-hooks-ts/commit/55376c2ec611c56b07b7818ee8de121114a1e438))
+
 # [0.3.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.2.0...v0.3.0) (2023-04-14)
 
 
