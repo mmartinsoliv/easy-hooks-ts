@@ -4,8 +4,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) [![NPM version](https://img.shields.io/npm/v/easy-hooks-ts)](https://www.npmjs.com/package/easy-hooks-ts)
 
-This library only works with React DOM.
-
 ---
 
 ## Status
