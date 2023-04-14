@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  name: 'izi-hooks',
+  name: 'easy-hooks-ts',
   entry: ['src/index.ts'],
   format: ['cjs', 'esm'],
   outDir: 'dist',
