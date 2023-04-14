@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.2.0...v0.3.0) (2023-04-14)
+
+
+### Features
+
+* **usetest:** create new custom hook ([66b9c09](https://github.com/mmartinsoliv/easy-hooks-ts/commit/66b9c09142f789addf2db57fa50a462a8f1fcc48))
+
 # [0.2.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.1.2...v0.2.0) (2023-04-14)
 
 
