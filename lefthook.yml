@@ -8,4 +8,8 @@ pre-commit:
     test:
       glob: "*.{js,ts,jsx,tsx}"
       run: npm run test
+test:
+  commands:
+    js-test:
+      run: npm run test
 
