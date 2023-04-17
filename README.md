@@ -43,18 +43,25 @@ npm install easy-hooks-ts
 ### Use `easy-hooks-ts`
 
 ```js
-import { useCount } from 'easy-hooks-ts';
-
-const BoopButton = () => {
-  const [count, handleCount] = useCount()
-
+import { useToggle } from 'easy-hooks-ts'
+ 
+export const Component = () => {
+  const [value, toggle, setValue] = useToggle()
+ 
+  const customToggle = () => setValue((x: boolean) => !x)
+ 
   return (
-     <>
-       <h1>Count: {count} </h1>
-       <button onClick={handleCount}>increment</button>;
-     </>
+    <>
+      <p>
+        Value is <code>{value.toString()}</code>
+      </p>
+      <button onClick={() => setValue(true)}>set true</button>
+      <button onClick={() => setValue(false)}>set false</button>
+      <button onClick={toggle}>toggle</button>
+      <button onClick={customToggle}>custom toggle</button>
+    </>
   )
-};
+}
 ```
 
 ## API Documentation
