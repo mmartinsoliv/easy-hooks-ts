@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.4.0...v0.5.0) (2023-04-18)
+
+
+### Features
+
+* create useClipboard ([823d46b](https://github.com/mmartinsoliv/easy-hooks-ts/commit/823d46bbae6c7ca7a69a146593aed36825234ca1))
+
 # [0.4.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.3.0...v0.4.0) (2023-04-14)
 
 
