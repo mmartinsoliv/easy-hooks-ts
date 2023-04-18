@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.5.0...v0.6.0) (2023-04-18)
+
+
+### Features
+
+* **hook:** create useDebounce hook ([6e436f6](https://github.com/mmartinsoliv/easy-hooks-ts/commit/6e436f67f7603c16a049e07f1d8546c50a760554))
+
 # [0.5.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.4.0...v0.5.0) (2023-04-18)
 
 
