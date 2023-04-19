@@ -78,7 +78,9 @@
   "keywords": [
     "custom hook",
     "library",
-    "react"
+    "react",
+    "hooks",
+    "typescript"
   ],
   "author": "Matheus Martins <mmartinsolliv@gmail.com>",
   "license": "MIT",
