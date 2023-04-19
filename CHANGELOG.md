@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.6.0...v0.7.0) (2023-04-19)
+
+
+### Features
+
+* **fetch:** create useFetch hook ([a485128](https://github.com/mmartinsoliv/easy-hooks-ts/commit/a485128fdfbece32064f93cdbccb69affd22511c))
+
 # [0.6.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.5.0...v0.6.0) (2023-04-18)
 
 
