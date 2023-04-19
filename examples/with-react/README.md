@@ -24,4 +24,4 @@ http://localhost:3000
 
 ## Stackblitz
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-z7abvy?file=App.tsx)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://react-ts-z7abvy.stackblitz.io)
