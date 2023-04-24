@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.7.0...v0.8.0) (2023-04-24)
+
+
+### Features
+
+* **counter:** create new custom hook ([a4c6caa](https://github.com/mmartinsoliv/easy-hooks-ts/commit/a4c6caa6180faa7f1b45e04db2a55f1054024247))
+
 # [0.7.0](https://github.com/mmartinsoliv/easy-hooks-ts/compare/v0.6.0...v0.7.0) (2023-04-19)
 
 
