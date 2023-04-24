@@ -18,19 +18,21 @@ Feel free to create a pull request or issues for features, bug fixes or improvem
 
 ## Installation
 
-Package can be added using **yarn**:
+Package can be added using:
+
+**Yarn**
 
 ```bash
 yarn add easy-hooks-ts
 ```
 
-NPM:
+**NPM**
 
 ```bash
 npm install easy-hooks-ts
 ```
 
-PNPM:
+**PNPM**
 
 ```bash
 pnpm install easy-hooks-ts
