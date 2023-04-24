@@ -24,17 +24,23 @@ Package can be added using **yarn**:
 yarn add easy-hooks-ts
 ```
 
-Or, use NPM:
+NPM:
 
 ```bash
 npm install easy-hooks-ts
+```
+
+PNPM:
+
+```bash
+pnpm install easy-hooks-ts
 ```
 
 ---
 
 ## Demo
 
-:hammer_and_wrench:	
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-z7abvy?file=App.tsx)
 
 ---
 
