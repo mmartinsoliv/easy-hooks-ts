@@ -1,32 +1,35 @@
 import { useState } from 'react'
 
-export const useClipboard = ({ timeout = 2000 }) => {
-  const [hasCopied, setCopied] = useState(false)
-  const [copyTimeout, setCopyTimeout] = useState()
+interface UseClipboardOptions {
+  timeout?: number
+}
 
-  const isForever = timeout === 0
+interface UseClipboardResult {
+  hasCopied: boolean
+  handleCopy: (text: string) => void
+  reset: () => void
+}
 
-  const handleCopyResult = (value: boolean) => {
-    clearTimeout(copyTimeout)
-    if (!isForever) {
-      setCopyTimeout(setTimeout(() => setCopied(false), timeout) as any)
-    }
-    setCopied(value)
-  }
+export const useClipboard = ({ timeout = 2000 }: UseClipboardOptions = {}): UseClipboardResult => {
+  const [hasCopied, setHasCopied] = useState(false)
+  const [copyTimeout, setCopyTimeout] = useState<NodeJS.Timeout | null>(null)
 
-  const copy = (text: string) => {
-    if ('clipboard' in navigator) {
-      navigator.clipboard
-        .writeText(text)
-        .then(() => handleCopyResult(true))
-        .catch(console.error)
-    }
+  const handleCopy = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setHasCopied(true)
+      if (timeout) {
+        const timeoutId = setTimeout(() => setHasCopied(false), timeout)
+        setCopyTimeout(timeoutId)
+      }
+    })
   }
 
   const reset = () => {
-    setCopied(false)
-    clearTimeout(copyTimeout)
+    setHasCopied(false)
+    if (copyTimeout) {
+      clearTimeout(copyTimeout)
+    }
   }
 
-  return { copy, reset, hasCopied }
+  return { hasCopied, handleCopy, reset }
 }
